@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .profile-container {
+            display: flex;
+            flex-grow: 1;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-left: 55px; /* Ajusta el margen izquierdo */
+        }
+        .photo-section {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .text-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-container {
+            border: 20px solid #ffcc00;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .header {
+            font-size: 2em;
+            color: #333;
+            margin: 0;
+        }
+        .greeting {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        .description {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .description p {
+            margin: 10px 0;
+        }
+        .description ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .description ul li {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            padding: 20px 0;
+            background-color: #fff;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="photo-section">
+            <div class="profile-photo">
+                <img src="Imagen.jpg" alt="Foto de perfil">
+            </div>
+        </div>
+        <div class="text-section">
+            <div class="header-container">
+                <div class="greeting" style="text-align: right; margin-top: 10px; font-size: 0.9em;">¡Hola! Bienvenidos a mi página personal</div>
+                <div class="header"> <strong>Nancy Rosmery Castope Mosqueira</strong></div>
+            </div>
+            <div class="description">
+               <p style="text-align:left ;">Hola,mi nombre es Nancy Rosmery Castope Mosqueira,
+                    tengo 20 años y estoy estudiando computación e informatica IV ciclo </p>
+                    <p><strong>Durante el curso, eh adquirido mucha informacion y comprensión de los principios fundamentales de la programación y el desarrollo web, incluyendo habilidades en lenguajes como HTML y CSS. Además a desarrollar aplicaciones web básicas y a implementar prácticas de diseño responsivo. En lo que resta de mi formación profesional técnica, espero profundizar en tecnologías avanzadas como frameworks de JavaScript, mejorar mis habilidades en desarrollo de lenguajes como Python o Node.js, y obtener experiencia práctica a través de proyectos colaborativos, con el objetivo de estar completamente preparada para enfrentar los diferentes  desafíos y aumentar aun mas mis habilidades respecto a mi carrera.</strong></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <p><u style="color:skyblue;">Página web de Nancy Rosmery Castope Mosqueira</u> creada por el curso de <u style="color:skyblue;">Informática IV</u></p>
+    </footer>
+</body>
+</html>
