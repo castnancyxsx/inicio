@@ -1,129 +1,118 @@
 <!DOCTYPE html>
-<html lang="ES-es">
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> <!--ayuda su visualizacion en dispositivos moviles, en este caso, evitar hacer zoom a la web en dispositivos moviles que podria estropear la visivilidad del sitio dandole una escala 1:1 a todo los elementos -->
-<link rel="stylesheet" type="text/css" href="estilos.css">
-	<title>formulario</title>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .profile-container {
+            display: flex;
+            flex-grow: 1;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-left: 55px; /* Ajusta el margen izquierdo */
+        }
+        .photo-section {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .text-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-container {
+            border: 20px solid #ffcc00;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .header {
+            font-size: 2em;
+            color: #333;
+            margin: 0;
+        }
+        .greeting {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        .description {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .description p {
+            margin: 10px 0;
+        }
+        .description ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .description ul li {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            padding: 20px 0;
+            background-color: #fff;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
-<h1>historia de cajamarca</h1>
-<p>El imperio más grande de la América precolombina comenzó en el Cuzco, donde los primeros incas se asentaron alrededor del siglo XIII d. C. Desde allí se expandieron y lograron dominar hasta 3.200 kilómetros del territorio andino, parte de los actuales Perú, Colombia, Ecuador, Chile, Bolivia y Argentina.
-
-La organización impuesta por el imperio Tahuantinsuyo, como también se le conoce al dominio de esta antigua civilización, significó el Estado más importante antes de la colonización de los españoles.
-
-Cajamarca tuvo un acontecimiento protagónico y determinante durante el período incaico, pues fue en esta ubicación geográfica donde ocurrió lo que hoy se conoce como el “encuentro de dos mundos”.
-
-Fue en el centro de Cajamarca donde en 1532 los españoles vieron por primera vez a Atahualpa, soberano de todo el imperio, y donde ocurrió lo que los cronistas han llamado: la “masacre de Cajamarca”, hecho en el que es capturado el máximo líder de los incas.
-
-
-<p/>
-<h1>Conquista española</h1>
-
-<p>Todo comenzó en 1532 con la llegada de los españoles, primero a Tumbes y luego a lo que hoy es el centro de Cajamarca.
-
-La conquista española, que provocó el comienzo del final del imperio Inca, se dio con la captura de Atahualpa luego de una emboscada por parte de los extranjeros encabezados por Francisco Pizarro, que valiéndose de una supuesta entrevista diplomática con el emperador, le hicieron prisionero.
-
-Ocho meses después de ese brutal encuentro entre América y Europa, en el que menos de 200 españoles doblegaron a miles pero desarmados soldados incas que asistieron al acercamiento, sería ajusticiado Atahualpa, no sin antes haber dado a sus captores una inmensa riqueza en oro y plata como pago por su liberación.
-
-Esa inútil entrega de una parte de los tesoros del imperio Inca se realizó en un salón hoy conocido como, Cuarto del Rescate, lugar emblemático y fundamental para comprender la historia de la ciudad de Cajamarca.
-
-Finalmente, el líder inca muere ahorcado en manos de los conquistadores en julio de 1533 y con él acabó el gran imperio. Desde entonces y por los próximos 300 años, los españoles se asentaron en la ciudad, donde aún quedan vestigios de la época<p/>
-
-
-<center><h1>Ejemplos de formularios</h1></center>
-<form action="#" method="POST" enctype="multipart/form-data" >  <!-- el encrtype de tipo multipar se utilaza para encriptar archivos adjuntos en el formulario -->
-	<fieldset>
-<legend>informacion basica</legend>
-
-	<label >Nombre: <input type="text" name="nombrecompleto" size="60"> </label> <br><br>
-<label class="Especifico">Apellido <input type="text" name="apellidos" size="60" minlength="2" maxlength="100" pattern="[A-Za-z ]+" title="solo se permiten texto en mayusculas o minusculas" required  ></label><br><br>
-<label>Fecha de nacimiento
-	<input type="date" value="2000-01-01" min="1990-10-10" max="2030-01-01" name="nacimiento">
-</label>
-<label>DNI:	<input type="tex" name="dni" size="19" minlength="8" maxlength="8" pattern="[0-9]+" title="solo numeros ,logitud 8 caracteres" required></label>
-<br><br>
-
-<label>correo electronico:
-	<input type="email" placeholder="micorreo@gmail.com" size="50" name="correo" required>
-</label><br><br>
-
-<label>Telefono:
-	<input type="tel" name="telefono" required>
-	</label>
-
- <label>Sexo: </label>
-<input type="radio" name="genero" value="Varón" checked>
-<label>Varòn:</label>
-<input type="radio" name="genero" value="Mujer">
-<label>Mujer:</label>
-<br> <br>
-<label>ciudad de nacimiento: 
-	     <select name="ciudades" id="ciudades">
-    <option value="cajamarca">cajamarca</option>
-    <option value="trujillo">trujillo</option>
-    <option value="lima">lima</option>
-    <option value="chiclayo">chiclayo</option>
-  </select> </label>
-<br><br>
-<label>foto:
-	<input type="file" name="txtFoto"/>
-</label>
-<label>ciudad de nacimiento: 
-	     <select name="ciudades" id="ciudades">
-    <option value="cajamarca">cajamarca</option>
-    <option value="trujillo">trujillo</option>
-    <option value="lima">lima</option>
-    <option value="chiclayo">chiclayo</option>
-  </select> </label>
-</fieldset>
-<fieldset>
-	<legend>informacion adicional</legend>
-<br>
-	<label>Idiomas:<br>
-		<input type="checkbox" name="idioma" value="español" checked>
-		<span>español</span><br>
-		<input type="checkbox" name="idioma" value="ingles">
-		<span>ingles</span><br>
-		<input type="checkbox" name="idioma" value="Aleman">
-		<span>Aleman</span><br>
-	</label>
-	<br>
-<label>
-Seleccione su curso:<br>
-<select name="curso" size="4" > <!-- se puede aplicar "multiple" y seleccionar vatias opciones usando el boton control" -->
-	<option value="Windows">Windows</option>
-	<option value="Word">Word</option>
-	<option value="Excel">Excel</option>
-	<option value="Access">Access</option>
-	<option value="Power Point">Power Point</option>
-	<option value="Flash">Flash</option>
-	<option value="Photoshop">Photoshop</option>
-</select><br><br>
-</label>
-<label>Mensaje: <br>
-<textarea name="mensaje" rows="5" cons="40" ></textarea>
-</label>
-<br><br>
-<label>contraseña:
-	<input type="password" size="15" title="Contraseña" name="password" required></label> 
-
-
-</fieldset>
-<br>
-<input type="submit" value="Enviar datos">
-
-<input type="reset" value="Borrar datos">
-
-
-
-</form>
-
-
-<footer>
-	<p>
-		&copy; Nancy Castope Mosqueira - Productos de Maquillaje.</p>
-</footer>
+    <div class="profile-container">
+        <div class="photo-section">
+            <div class="profile-photo">
+                <img src="Imagen.jpg" alt="Foto de perfil">
+            </div>
+        </div>
+        <div class="text-section">
+            <div class="header-container">
+                <div class="greeting" style="text-align: right; margin-top: 10px; font-size: 0.9em;">¡Hola! Bienvenidos a mi página personal</div>
+                <div class="header"> <strong>Nancy Rosmery Castope Mosqueira</strong></div>
+            </div>
+            <div class="description">
+               <p style="text-align:left ;">Hola,mi nombre es Nancy Rosmery Castope Mosqueira,
+                    tengo 20 años y estoy estudiando computación e informatica IV ciclo </p>
+                    <p><strong>Durante el curso, eh adquirido mucha informacion y comprensión de los principios fundamentales de la programación y el desarrollo web, incluyendo habilidades en lenguajes como HTML y CSS. Además a desarrollar aplicaciones web básicas y a implementar prácticas de diseño responsivo. En lo que resta de mi formación profesional técnica, espero profundizar en tecnologías avanzadas como frameworks de JavaScript, mejorar mis habilidades en desarrollo de lenguajes como Python o Node.js, y obtener experiencia práctica a través de proyectos colaborativos, con el objetivo de estar completamente preparada para enfrentar los diferentes  desafíos y aumentar aun mas mis habilidades respecto a mi carrera.</strong></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <p><u style="color:skyblue;">Página web de Nancy Rosmery Castope Mosqueira</u> creada por el curso de <u style="color:skyblue;">Informática IV</u></p>
+    </footer>
 </body>
 </html>
